@@ -1,4 +1,8 @@
+'use client';
+
+import { use } from "react";
 import Logo from "../Header/Logo";
+import ScrollButton from "./ScrollButton";
 
 type FooterSectionProps = {
   title: string;
@@ -53,6 +57,7 @@ export const Footer = () => {
         <li className="px-[60px]">Privacy Policies</li>
         <li className="px-[60px]">User Agreements</li>
       </ul>
+      <ScrollButton />
     </footer>
   );
 };

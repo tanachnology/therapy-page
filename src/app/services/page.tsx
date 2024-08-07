@@ -1,7 +1,12 @@
+'use client';
+
+import { StaticBanner } from "@/components/StaticBanner";
+
 export default function Services() {
   return (
     <>
-      <p>Services</p>
+    <StaticBanner />
+      
     </>
   )
 }
