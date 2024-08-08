@@ -38,10 +38,10 @@ export const BannerCarrousel: React.FC<BannerCarrouselProps> = ({
   };
 
   return (
-    <div className="relative w-4/5 mx-auto overflow-hidden">
+    <div className="relative w-full mx-auto overflow-hidden">
       {/* Botón para ir a la imagen anterior */}
       <button
-        className="z-10 absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+        className="z-10 absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-800 text-[50px]"
         onClick={goToPrevious}
       >
         &#10094;
@@ -55,12 +55,12 @@ export const BannerCarrousel: React.FC<BannerCarrouselProps> = ({
         {images.map((image, index) => (
           <div
             key={index}
-            className="min-w-full h-64 flex items-center justify-center bg-gray-200"
+            className="min-w-full  max-h-[500px] flex items-center justify-center bg-gray-200"
           >
             <img
               src={image}
               alt={`Slide ${index}`}
-              className="w-full h-auto max-w-full max-h-full"
+              className="w-full h-auto object-cover max-w-full max-h-full"
             />
           </div>
         ))}
@@ -68,7 +68,7 @@ export const BannerCarrousel: React.FC<BannerCarrouselProps> = ({
 
       {/* Botón para ir a la siguiente imagen */}
       <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 text-[50px] text-gray-800"
         onClick={goToNext}
       >
         &#10095;

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from 'next/link';
 
 interface NavbarProps {
   items: string[];
@@ -9,8 +10,10 @@ const Navbar: React.FC<NavbarProps> = ({ items }) => {
     <nav className="w-2/5">
       <ul className="flex justify-evenly">
         {items.map((item, index) => (
-          <li className="text-center" key={index}>
-            {item}
+          <li className="text-center text-[#46617e] cursor-pointer hover:text-[#3B8BAE] hover:underline transition duration-300" key={index}>
+            <Link href="/about">
+              {item}
+            </Link> 
           </li>
         ))}
       </ul>

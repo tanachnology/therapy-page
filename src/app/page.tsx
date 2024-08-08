@@ -1,32 +1,33 @@
 "use client";
 
 import { BannerCarrousel } from "@/components/BannerCarrousel";
-import { ContactForm } from "@/components/ContactForm";
 import {ContentGrid} from "@/components/ContentGrid";
 import { HeroSection } from "@/components/HeroSection";
 import InfoSection from "@/components/InfoSection";
 import MapSection from "@/components/MapSection";
-import { NewsGrid } from "@/components/NewsGrid";
+import { CardBlog } from "@/components/cardBlog/CardBlog";
 import StatisticsSection from "@/components/StatisticsSection";
+import { ContactForm } from "@/components/ContactForm";
 
 export default function Home() {
   return (
-    <>
+    <main className="px-[70px]">
       <BannerCarrousel 
         images=
         {[
-          "https://www.edelar.com.ar/static/theme/images/sin_imagen.jpg", 
-          "https://www.edelar.com.ar/static/theme/images/sin_imagen.jpg", 
-          "https://www.edelar.com.ar/static/theme/images/sin_imagen.jpg", 
+          "/modeloBanner.png", 
+          "/modeloBannerDos.png", 
+          "/modeloBanner.png", 
         ]} 
         />
         <HeroSection  />
         <ContentGrid />
-        <NewsGrid />
+        <CardBlog />
         <ContactForm />
+        
         <StatisticsSection />
         <MapSection />
-        <InfoSection />
-    </>
+        {/* <InfoSection /> */}
+    </main>
   );
 }

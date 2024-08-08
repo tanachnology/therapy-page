@@ -15,7 +15,7 @@ const FooterSection = ({ title, items }: FooterSectionProps) => (
     {items.map((item, index) => (
       <li
         key={index}
-        className="text-gray-600 mb-1.5 text-xs font-normal uppercase cursor-pointer"
+        className="text-white mb-1.5 text-xs font-normal uppercase cursor-pointer"
       >
         {item}
       </li>
@@ -26,7 +26,7 @@ const FooterSection = ({ title, items }: FooterSectionProps) => (
 export const Footer = () => {
   return (
     <footer>
-      <div className="flex justify-around pt-[62px] pb-[40px] bg-[#bbced6]">
+      <div className="flex justify-around pt-[62px] pb-[40px] bg-[#3B8BAE]">
         <ul className="">
           {/* Necesito un w-full para la img aqui */}
           <Logo />
@@ -53,9 +53,9 @@ export const Footer = () => {
           ]}
         />
       </div>
-      <ul className="text-gray-600 text-xs font-normal uppercase cursor-pointer flex justify-between pt-[20px] pb-[20px] list-none bg-[#00496b]">
-        <li className="px-[60px]">Privacy Policies</li>
-        <li className="px-[60px]">User Agreements</li>
+      <ul className="text-white text-xs font-normal uppercase cursor-pointer flex justify-between pt-[20px] pb-[20px] list-none bg-gray-800">
+        <li className="px-[90px]">Privacy Policies</li>
+        <li className="px-[90px]">User Agreements</li>
       </ul>
       <ScrollButton />
     </footer>

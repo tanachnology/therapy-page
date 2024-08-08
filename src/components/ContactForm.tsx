@@ -9,11 +9,11 @@ export const ContactForm = () => {
   }
 
   return (
-    <div className="max-w-md mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Agenda tu cita ahora</h1>
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+    <div className="max-w-xl mx-auto p-4">
+      <h1 className="text-5xl font-semibold mb-8 text-gray-800 text-center">Agendar cita</h1>
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 flex flex-col w-full">
         <div>
-          <label className="block text-sm font-medium text-gray-700">Nombre Completo</label>
+          <label className="block text-sm font-medium text-[#46617e]">Nombre Completo</label>
           <input
             type="text"
             {...register('fullName', { required: 'El nombre completo es obligatorio' })}
@@ -23,7 +23,7 @@ export const ContactForm = () => {
           {errors.fullName && <p className="text-red-500 text-sm">{errors.fullName.message}</p>}
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">Correo Electrónico</label>
+          <label className="block text-sm font-mediumtext-[#46617e]">Correo Electrónico</label>
           <input
             type="email"
             {...register('email', { 
@@ -39,7 +39,7 @@ export const ContactForm = () => {
           {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">Teléfono</label>
+          <label className="block text-sm font-medium text-[#46617e]">Teléfono</label>
           <input
             type="tel"
             {...register('phone', { 
@@ -55,7 +55,7 @@ export const ContactForm = () => {
           {errors.phone && <p className="text-red-500 text-sm">{errors.phone.message}</p>}
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">Mensaje</label>
+          <label className="block text-sm font-medium text-[#46617e]">Mensaje</label>
           <textarea
             {...register('message', { required: 'El mensaje es obligatorio' })}
             className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
@@ -63,10 +63,10 @@ export const ContactForm = () => {
           ></textarea>
           {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
         </div>
-        <div>
+        <div className='mx-auto'>
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white p-2 rounded-md"
+            className="bg-[#DDAD7A] text-white p-2 rounded-md mt-6 mb-16 w-[150px] h-[50px]"
           >
             Enviar
           </button>

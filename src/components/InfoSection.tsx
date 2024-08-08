@@ -2,7 +2,7 @@ import React from 'react'
 
 const InfoSection = () => {
   return (
-    <div className="flex justify-around items-center p-4 bg-blue-500 text-white">
+    <div className="flex justify-around items-center p-4 bg-[#9CC5D6] text-white">
       <div className="flex-1 text-center">
         <h2 className="text-xl font-bold mb-2">Secciones por Año</h2>
         <p>2021: 10</p>
