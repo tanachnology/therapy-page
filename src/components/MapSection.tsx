@@ -1,7 +1,7 @@
-import React from 'react'
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import 'leaflet/dist/leaflet.css'
-import L from 'leaflet'
+import React from 'react';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
 
 // Configura el ícono del marcador
 const markerIcon = new L.Icon({
@@ -11,14 +11,14 @@ const markerIcon = new L.Icon({
   popupAnchor: [1, -34],
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
   shadowSize: [41, 41]
-})
+});
 
-const MapSection = () => {
-  const position = [40.7128, -74.0060] // Reemplaza con la latitud y longitud de tu consultorio
+const MapSection: React.FC = () => {
+  const position: [number, number] = [40.7128, -74.0060]; // Reemplaza con la latitud y longitud de tu consultorio
 
   const handleMarkerClick = () => {
-    window.open('https://www.google.com/maps?q=40.7128,-74.0060', '_blank') // Reemplaza con la URL de Google Maps de tu consultorio
-  }
+    window.open('https://www.google.com/maps?q=40.7128,-74.0060', '_blank'); // Reemplaza con la URL de Google Maps de tu consultorio
+  };
 
   return (
     <div className="h-96 w-full">
@@ -34,7 +34,7 @@ const MapSection = () => {
         </Marker>
       </MapContainer>
     </div>
-  )
-}
+  );
+};
 
-export default MapSection
+export default MapSection;
