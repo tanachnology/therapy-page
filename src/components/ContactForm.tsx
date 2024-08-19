@@ -1,12 +1,19 @@
-import React from 'react'
-import { useForm } from 'react-hook-form'
+import React from 'react';
+import { useForm, SubmitHandler } from 'react-hook-form';
 
-export const ContactForm = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm()
+interface FormData {
+  fullName: string;
+  email: string;
+  phone: string;
+  message: string;
+}
 
-  const onSubmit = data => {
-    console.log(data)
-  }
+export const ContactForm: React.FC = () => {
+  const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
+
+  const onSubmit: SubmitHandler<FormData> = data => {
+    console.log(data);
+  };
 
   return (
     <div className="max-w-xl mx-auto p-4">
@@ -23,7 +30,7 @@ export const ContactForm = () => {
           {errors.fullName && <p className="text-red-500 text-sm">{errors.fullName.message}</p>}
         </div>
         <div>
-          <label className="block text-sm font-mediumtext-[#46617e]">Correo Electrónico</label>
+          <label className="block text-sm font-medium text-[#46617e]">Correo Electrónico</label>
           <input
             type="email"
             {...register('email', { 
@@ -73,5 +80,5 @@ export const ContactForm = () => {
         </div>
       </form>
     </div>
-  )
-}
+  );
+};
