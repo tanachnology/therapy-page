@@ -12,7 +12,19 @@ import {
   FaPhone,
 } from "react-icons/fa";
 
-const SpecializationCard = ({ icon, title, description }) => (
+interface SpecializationCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+interface TimelineItemProps {
+  year: string;
+  description: string;
+}
+
+
+const SpecializationCard: React.FC<SpecializationCardProps> = ({ icon, title, description }) => (
   <div className="bg-white p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105">
     <div className="text-3xl mb-2">{icon}</div>
     <h3 className="text-xl font-bold mb-2">{title}</h3>
@@ -20,7 +32,7 @@ const SpecializationCard = ({ icon, title, description }) => (
   </div>
 );
 
-const TimelineItem = ({ year, description }) => (
+const TimelineItem: React.FC<TimelineItemProps> = ({ year, description }) => (
   <div className="flex items-center mb-4">
     <div className="bg-[#46617e] text-white rounded-full w-8 h-8 flex items-center justify-center mr-4">
       {year}
