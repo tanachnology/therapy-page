@@ -15,9 +15,9 @@ export default function Home() {
       <BannerCarrousel 
         images=
         {[
-          "/modeloBanner.png", 
-          "/modeloBannerDos.png", 
-          "/modeloBanner.png", 
+          "/kidsGroup.jpg", 
+          "/stressedChild.jpg", 
+          "/therapySession.jpg", 
         ]} 
         />
         <HeroSection  />

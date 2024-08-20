@@ -12,10 +12,10 @@ export const CardBlog = () => {
             <Logo />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-[#46617e]">{card.title}</h2>
-            <p className='text-[#46617e]'>{card.description}</p>
-            <a href="#" className="text-[#46617e] underline font-semibold">Leer más</a>
-            <div className="absolute top-0 right-0 h-full border-r-2 border-gray-400"></div>
+            <h2 className="text-xl font-bold text-[#615DEC]">{card.title}</h2>
+            <p className='text-[#301781]'>{card.description}</p>
+            <a href="#" className="text-[#615DEC] underline font-semibold">Leer más</a>
+            <div className="absolute top-0 right-0 h-full border-r-2 border-[#76E2F4]"></div>
           </div>
         </div>
       ))}

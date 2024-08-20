@@ -12,7 +12,7 @@ export const Header = () => {
     return (
         <>
         <ContactHeader />
-        <header className="mb-[30px]">
+        <header className="mb-[2px]">
             <div className="hidden md:flex flex justify-center items-center">
                 <Navbar items={navbar1Items}/> 
                 <div className="max-w-[80px]">

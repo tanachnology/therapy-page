@@ -18,7 +18,7 @@ const Navbar: React.FC<NavbarProps> = ({ items }) => {
     <nav className="w-2/5">
       <ul className="flex justify-evenly">
         {items.map((item, index) => (
-          <li className="text-center text-[#46617e] cursor-pointer hover:text-[#3B8BAE] hover:underline transition duration-300" key={index}>
+          <li className="text-center text-[#2C3E50] cursor-pointer hover:text-[#E67E22] hover:scale-110 transition-transform duration-300" key={index}>
             <Link href={itemToPathMap[item] || '#'} >
               {item}
             </Link> 

@@ -3,7 +3,7 @@ import { FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 export const ContactHeader = () => {
   return (
-    <div className="flex justify-between items-center p-4 bg-gray-800 text-white">
+    <div className="flex justify-between items-center p-4 bg-[#1A5276] text-white">
       <div className="flex items-center">
         <FaMapMarkerAlt className="mr-2" />
         <span>1234 Calle Principal, Ciudad, País</span>

@@ -229,8 +229,8 @@ const About = () => {
           <Image
             src="/whiteProfile.jpeg"
             alt="Dra. Esmeralda Conde"
-            width={144}
-            height={144}
+            width={500}
+            height={500}
           />
         </div>
         <h1 className="text-3xl font-bold text-[#46617e]">

@@ -17,7 +17,7 @@ export const ContactForm: React.FC = () => {
 
   return (
     <div className="max-w-xl mx-auto p-4">
-      <h1 className="text-5xl font-semibold mb-8 text-gray-800 text-center">Agendar cita</h1>
+      <h1 className="text-5xl font-semibold mb-8 text-[#2C3E50] text-center">Agendar cita</h1>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 flex flex-col w-full">
         <div>
           <label className="block text-sm font-medium text-[#46617e]">Nombre Completo</label>
@@ -73,7 +73,7 @@ export const ContactForm: React.FC = () => {
         <div className='mx-auto'>
           <button
             type="submit"
-            className="bg-[#DDAD7A] text-white p-2 rounded-md mt-6 mb-16 w-[150px] h-[50px]"
+            className="bg-[#E67E22] text-white p-2 rounded-md mt-6 mb-16 w-[150px] h-[50px]"
           >
             Enviar
           </button>

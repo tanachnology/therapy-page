@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { PiArrowRightThin, PiArrowLeftThin  } from "react-icons/pi";
 
 interface BannerCarrouselProps {
   images: string[];
@@ -41,10 +42,10 @@ export const BannerCarrousel: React.FC<BannerCarrouselProps> = ({
     <div className="relative w-full mx-auto overflow-hidden">
       {/* Botón para ir a la imagen anterior */}
       <button
-        className="z-10 absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-800 text-[50px]"
+        className="z-10 absolute top-1/2 left-4 transform -translate-y-1/2 text-[#2C3E50] text-[50px]"
         onClick={goToPrevious}
       >
-        &#10094;
+        <PiArrowLeftThin />
       </button>
 
       {/* Contenedor de las imágenes */}
@@ -68,10 +69,10 @@ export const BannerCarrousel: React.FC<BannerCarrouselProps> = ({
 
       {/* Botón para ir a la siguiente imagen */}
       <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 text-[50px] text-gray-800"
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 text-[50px] text-[#2C3E50]"
         onClick={goToNext}
       >
-        &#10095;
+        <PiArrowRightThin />
       </button>
 
       {/* Puntitos para cambiar de imagen */}
@@ -80,7 +81,7 @@ export const BannerCarrousel: React.FC<BannerCarrouselProps> = ({
           <button
             key={index}
             className={`w-3 h-3 rounded-full ${
-              index === currentIndex ? "bg-gray-800" : "bg-gray-400"
+              index === currentIndex ? "bg-[#E67E22]" : "bg-gray-400"
             }`}
             onClick={() => goToImage(index)}
           />
