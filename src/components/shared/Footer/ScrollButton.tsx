@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+/* import React, { useState, useEffect } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
 
 const ScrollButton = () => {
@@ -41,3 +41,4 @@ const ScrollButton = () => {
   };
 
 export default ScrollButton
+ */
