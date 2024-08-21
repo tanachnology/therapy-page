@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -37,4 +37,4 @@ const MapSection: React.FC = () => {
   );
 };
 
-export default MapSection;
+export default MapSection; */

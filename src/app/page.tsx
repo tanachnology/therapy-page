@@ -4,7 +4,7 @@ import { BannerCarrousel } from "@/components/BannerCarrousel";
 import {ContentGrid} from "@/components/ContentGrid";
 import { HeroSection } from "@/components/HeroSection";
 import InfoSection from "@/components/InfoSection";
-import MapSection from "@/components/MapSection";
+/* import MapSection from "@/components/MapSection"; */
 import { CardBlog } from "@/components/cardBlog/CardBlog";
 import StatisticsSection from "@/components/StatisticsSection";
 import { ContactForm } from "@/components/ContactForm";
@@ -26,7 +26,7 @@ export default function Home() {
         <ContactForm />
         
         <StatisticsSection />
-        <MapSection />
+        {/* <MapSection /> */}
         {/* <InfoSection /> */}
     </main>
   );
