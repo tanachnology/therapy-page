@@ -15,9 +15,9 @@ export default function Home() {
       <BannerCarrousel 
         images=
         {[
-          "/kidsGroup.jpg", 
-          "/stressedChild.jpg", 
-          "/therapySession.jpg", 
+          "/dificultades.jpg", 
+          "/terapia.jpg", 
+          "/bienestar.jpg", 
         ]} 
         />
         <HeroSection  />
@@ -25,7 +25,7 @@ export default function Home() {
         <CardBlog />
         <ContactForm />
         
-        <StatisticsSection />
+        {/* <StatisticsSection /> */}
         {/* <MapSection /> */}
         {/* <InfoSection /> */}
     </main>

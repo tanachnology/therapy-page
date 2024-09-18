@@ -4,7 +4,7 @@ export default function Tdah() {
   return (
     <>
       <StaticBanner
-        backgroundImage="../../../public/banner.png"
+        backgroundImage="/abstracto.jpg"
         subtitle="TDAH"
         title="Trastorno por Déficit de Atención e Hiperactividad"
       />

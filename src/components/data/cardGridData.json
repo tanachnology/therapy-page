@@ -1,35 +1,35 @@
 [
   {
-    "title": "Terapia psicológica para adultos y niños(as) con TDAH:",
-    "text": "Donde cada persona puede aprender a gestionar sus emociones, reconocer sus dificultades, autocontrolar impulsos, manejar la frustración, afrontar problemas con asertividad, aliviar ansiedad, estrés y tristeza, descubrir sus recursos personales, mejorar la autoestima y fortalecer relaciones.",
+    "title": "",
+    "text": "En la terapia psicológica descubrimos los recursos y las fortalezas de cada niño(a), adolescente o adulto, para que pueda avanzar en la mejora de sus síntomas, e incidir de forma positiva en sus contextos (familiar, escolar y/o laboral).",
     "image": ""
   },
   {
-    "image": "/imgGrilla2.png",
+    "image":"/miedo.jpg",
     "text": ""
   },
   {
-    "title": " Atención a Niños y Adolescentes:",
-    "text": "Incluye la participación activa de los padres, ofreciendo entrenamiento especializado para el bienestar psicoemocional y desarrollo de los hijos. Se coordinan actividades con centros escolares y otros profesionales, promoviendo una comprensión profunda y un avance continuo en su desarrollo personal."
+    "title": "",
+    "text": "En la terapia con niños y adolescentes, participan activamente sus padres, para comprender el TDAH y construir las estrategias para mejorar los síntomas. Así, podrán cuidar las relaciones familiares y la autoestima."
   },
   {
-    "image": "/imgGrilla2.png",
+    "image":"/union.jpg",
     "text": ""
   },
   {
-    "title": "Aquí, cada persona puede aprender a:",
+    "title": "Cada persona puede aprender a:",
     "text": [
-      "Gestionar emociones",
-      "Reconocer dificultades",
+      "Gestionar sus emociones",
+      "Reconocer las dificultades",
       "Controlar impulsos",
-      "Manejar frustración",
-      "Aliviar ansiedad",
+      "Manejar la frustración",
+      "Aliviar la ansiedad",
       "Usar recursos personales",
-      "Fortalecer relaciones"
+      "Fortalecer sus relaciones interpersonales"
     ]
   },
   {
-    "image": "/imgGrilla2.png",
+    "image":"/esperanza.jpg",
     "text": ""
   }
 ]

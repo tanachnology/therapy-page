@@ -5,7 +5,7 @@ interface NavbarProps {
   items: string[];
 }
 const itemToPathMap: { [key: string]: string } = {
-  'Dra Esmeralda Conde': '/about',
+  'Dra. Esmeralda Conde': '/about',
   'Servicios': '/services',
   'FAQ': '/faq',
   'Blog': '/blog',

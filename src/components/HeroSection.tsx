@@ -6,7 +6,7 @@ export const HeroSection = () => {
       Terapia psicológica para el TDAH
       </h1>
       <h3 className=" pt-5 font-semibold text-[#7F8C8D] text-2xl leading-tight tracking-normal break-words">
-        Facilitamos un avance continuo para adultos y adolescentes
+      Facilitamos el desarrollo y bienestar psicoemocional de niños, adolescentes y adultos
       </h3>
     </div>
   )

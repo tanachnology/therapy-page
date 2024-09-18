@@ -6,14 +6,14 @@ export const ContactHeader = () => {
     <div className="flex justify-between items-center p-4 bg-[#1A5276] text-white">
       <div className="flex items-center">
         <FaMapMarkerAlt className="mr-2" />
-        <span>1234 Calle Principal, Ciudad, País</span>
+        <span>Albacete y Motilleja, España</span>
       </div>
       <div className="flex items-center">
         <FaEnvelope className="mr-2" />
-        <span className="mr-2">correo@ejemplo.com</span>
+        <span className="mr-2">correoPendiente@ejemplo.com</span>
         <span className="mr-2">|</span>
         <FaPhone className="mr-2" />
-        <span className="mr-2">+123 456 7890</span>
+        <span className="mr-2">+34 661 098 351</span>
       </div>
     </div>
   );

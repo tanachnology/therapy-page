@@ -32,7 +32,7 @@ export default function Blog() {
   return (
     <>
       <StaticBanner
-        backgroundImage="../../../public/banner.png"
+        backgroundImage="/blog.jpg"
         subtitle="Blogs"
         title="Conoce nuestros artículos"
       />

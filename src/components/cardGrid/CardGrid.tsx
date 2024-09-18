@@ -9,7 +9,7 @@ interface CardGridProps {
 const CardGrid: React.FC<CardGridProps> = ({ title, text, image }) => {
   return (
     <div
-      className="bg-[#9CC5D6] p-5 text-justify min-h-[400px]"
+      className="bg-[#9CC5D6] p-5 min-h-[400px]"
       style={{
         backgroundImage: `url(${image})`, // Establecer la imagen de fondo
         backgroundSize: "cover", // Ajustar el tamaño de la imagen

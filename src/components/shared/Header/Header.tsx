@@ -7,7 +7,7 @@ import { ContactHeader } from "./ContactHeader";
 import Link from "next/link";
 
 export const Header = () => {
-    const navbar1Items = ["Dra Esmeralda Conde", "Servicios", "FAQ"];
+    const navbar1Items = ["Dra. Esmeralda Conde", "Servicios", "FAQ"];
     const navbar2Items = ["Blog", "TDAH", "Contacto"];
     return (
         <>

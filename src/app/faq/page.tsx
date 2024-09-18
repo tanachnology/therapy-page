@@ -7,8 +7,8 @@ const FAQAccordion = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const faqs = [
-    { question: "¿Qué es la terapia cognitivo-conductual?", answer: "La terapia cognitivo-conductual es un tipo de terapia que ayuda a los individuos a identificar y cambiar patrones de pensamiento negativos y comportamientos problemáticos." },
-    { question: "¿Cómo puede ayudar la terapia de juego a mi hijo?", answer: "La terapia de juego utiliza el juego para ayudar a los niños a expresar sus sentimientos, mejorar sus habilidades sociales y resolver conflictos." },
+    { question: "¿QUÉ ES EL TDAH?", answer: "El trastorno por Déficit de Atención e Hiperactividad (TDAH) es un trastorno del desarrollo de la habilidad para regular el propio comportamiento y para prever el futuro (Rusel Barkley) (enviar al enlace: https://www.russellbarkley.org/). Afecta a millones de niños y a menudo continúa en la edad adulta.Para Barkley es un trastorno del desarrollo del autocontrol, englobando los problemas para mantener la atención y para controlar los impulsos y el nivel de actividad. Estos problemas se reflejarán en el deterioro de la voluntad, en el control de la conducta a lo largo del tiempo y para mantener en la memoria las metas y consecuencias futuros.Este trastorno no se debe a un fracaso de los padres en la crianza de su hijo(a).En el Manual Diagnóstico y Estadístico (DSM-5) se define como un patrón persistente de inatención y/o hiperactividad-impulsividad que interfiere con el funcionamiento o el desarrollo" },
+    { question: "¿CÚALES SON LOS SÍNTOMAS DEL TDAH?", answer: "La terapia de juego utiliza el juego para ayudar a los niños a expresar sus sentimientos, mejorar sus habilidades sociales y resolver conflictos." },
     { question: "¿Qué implica la terapia familiar?", answer: "La terapia familiar involucra a los miembros de la familia en el proceso terapéutico para mejorar la comunicación y resolver problemas familiares." },
     { question: "¿Qué es la terapia de arte?", answer: "La terapia de arte permite a los niños usar el arte como una forma de expresión y una herramienta para explorar sus emociones y experiencias." },
     { question: "¿Cuánto tiempo dura cada sesión de terapia?", answer: "Cada sesión de terapia generalmente dura entre 45 y 60 minutos, dependiendo de las necesidades del paciente." },
@@ -45,7 +45,7 @@ export default function Faq() {
   return (
     <>
       <StaticBanner
-        backgroundImage="../../../public/banner.png"
+        backgroundImage="/ask.jpg"
         subtitle="Frequently Asked Questions"
         title="¿Qué preguntas tienes?"
       />

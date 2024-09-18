@@ -5,12 +5,14 @@ import Image from "next/image";
 import {
   FaBrain,
   FaChild,
-  FaUserGraduate,
-  FaUserTie,
-  FaCheck,
   FaEnvelope,
   FaPhone,
 } from "react-icons/fa";
+import { BsPersonHeart } from "react-icons/bs";
+import { RiUserHeartFill } from "react-icons/ri";
+import { SiCrowdsource } from "react-icons/si";
+import { MdLocalLibrary } from "react-icons/md";
+import { IoIosHappy } from "react-icons/io";
 
 interface SpecializationCardProps {
   icon: React.ReactNode;
@@ -52,78 +54,117 @@ const About = () => {
             className="font-sans text-gray-800 p-6 bg-cover bg-center"
             style={{ backgroundImage: "url(/blueBg.jpg)" }}
           >
-            {/* Áreas de Especialización */}
             <section className="py-10">
               <h2 className="text-3xl font-bold text-center mb-6">
-                Áreas de Especialización
+                Áreas de intervención en el TDAH
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <SpecializationCard
+                  icon={<BsPersonHeart />}
+                  title="Regulación y gestión emocional"
+                  description="Aprender técnicas para identificar, 
+                  comprender y manejar las emociones de manera más efectiva; 
+                  reducir la reactividad emocional, mejorar la tolerancia a 
+                  la frustración y responder de forma adecuada en situaciones 
+                  difíciles. Lograremos un mayor control sobre las emociones 
+                  y reacciones impulsivas."
+                />
+                <SpecializationCard
                   icon={<FaBrain />}
-                  title="Ansiedad"
-                  description="Tratamiento especializado para la ansiedad."
+                  title="Entrenamiento en funciones ejecutivas"
+                  description="Fortalecer la atención, la memoria 
+                  y la planificación. Aprender estrategias para frenar 
+                  respuestas automáticas. Mejorar la organización, el 
+                  control de impulsos y la toma de decisiones. Conseguiremos 
+                  optimizar el procesamiento mental y la capacidad para 
+                  manejar tareas complejas y estructuradas."
                 />
                 <SpecializationCard
-                  icon={<FaChild />}
-                  title="Depresión"
-                  description="Apoyo y tratamiento para la depresión."
-                />
-                <SpecializationCard
-                  icon={<FaUserGraduate />}
+                  icon={<RiUserHeartFill />}
                   title="Autoestima"
-                  description="Fortalecimiento de la autoestima."
+                  description="Ayudar a reconocer fortalezas y logros, 
+                  contrarrestando las creencias negativas sobre sí mismo. 
+                  Promover una autoimagen positiva mediante el desarrollo 
+                  de habilidades sociales y emocionales; y el establecimiento
+                  de metas realistas, para fortalecer la confianza y fomentar 
+                  una visión más equilibrada y saludable de uno mismo."
                 />
                 <SpecializationCard
-                  icon={<FaUserTie />}
-                  title="Problemas Escolares"
-                  description="Intervención en problemas escolares."
+                  icon={<SiCrowdsource />}
+                  title="Entrenamiento para padres"
+                  description="Implementar técnicas de disciplina positiva y 
+                  establecer rutinas claras que fomenten la organización y el 
+                  autocontrol. Mejorar la comunicación, la comprensión de los 
+                  síntomas, el manejo de conductas desafiantes, reforzar la 
+                  autoestima y promover un ambiente familiar de apoyo y paciencia."
                 />
                 <SpecializationCard
-                  icon={<FaBrain />}
-                  title="Experiencias Traumáticas"
-                  description="Tratamiento de experiencias traumáticas."
+                  icon={<MdLocalLibrary />}
+                  title="Problemas escolares"
+                  description="Desarrollo de habilidades de organización, 
+                  planificación y manejo del tiempo; técnicas de estudio 
+                  adaptadas a sus necesidades, así como estrategias para 
+                  mantener la atención y reducir la distracción. Fortalecer 
+                  su autoestima académica y gestionar la frustración ante los 
+                  desafíos escolares."
                 />
                 <SpecializationCard
-                  icon={<FaChild />}
-                  title="Acoso"
-                  description="Apoyo en casos de acoso."
+                  icon={<IoIosHappy />}
+                  title="Bienestar psicoemocional"
+                  description="Identificar y manejar el estrés, la ansiedad 
+                  y la frustración asociados con el TDAH. Mejora de las 
+                  relaciones interpersonales. Fomentar un equilibrio emocional 
+                  y una mayor resiliencia ante los desafíos diarios."
                 />
               </div>
             </section>
 
-            {/* Experiencia en Terapia Psicológica */}
             <section className="py-10 bg-gray-100">
               <h2 className="text-3xl font-bold text-center mb-6">
                 Experiencia en Terapia Psicológica
               </h2>
               <div className="flex flex-col items-center">
                 <TimelineItem
-                  year="2000"
-                  description="Inicio de la carrera en psicología."
+                  year="20"
+                  description="Años Experiencia como psicóloga en distintos ámbitos"
                 />
                 <TimelineItem
-                  year="2005"
-                  description="Especialización en TDAH."
+                  year="2"
+                  description="Años Psicóloga clínica en entorno hospitalarios"
                 />
                 <TimelineItem
-                  year="2010"
-                  description="Trabajo en hospitales y clínicas."
+                  year="2"
+                  description="Años Intervención psicopedagógica para niños con traumas por violencia y en riesgo social"
                 />
                 <TimelineItem
-                  year="2015"
-                  description="Fundación de consulta privada."
+                  year="10"
+                  description="Años Entrenamiento a padres y madres con hijos(as) con TDAH y problemas de conducta"
                 />
                 <TimelineItem
-                  year="2020"
-                  description="Más de 20 años de experiencia."
+                  year="9"
+                  description="Años Intervención psicopedagógica para niños y adolescentes con TDAH"
+                />
+
+                <TimelineItem
+                  year="9"
+                  description="Años Intervención psicopedagógica para niños y adolescentes con TDAH"
+                />
+                <TimelineItem
+                  year="8"
+                  description="Años Terapia psicológica para adultos con TDAH, Ansiedad y Depresión"
+                />
+                <TimelineItem
+                  year="15"
+                  description="Años Entrenamiento a profesores para la enseñanza del lenguaje escrito; implementación de estrategias en el aula para alumnado con TDAH, dificultades de aprendizaje y problemas de conducta"
                 />
               </div>
+
+              <p>Mi amplia trayectoria me permite ofrecer una intervención integral y efectiva adaptada a las necesidades de cada individuo.</p>
             </section>
 
-            {/* Enfoque Personalizado y Desarrollo de Terapia */}
             <section className="py-10">
               <h2 className="text-3xl font-bold text-center mb-6">
-                Enfoque Personalizado y Desarrollo de Terapia
+                Enfoque personalizado y desarrollo de la terapia
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -131,9 +172,9 @@ const About = () => {
                     Enfoque Personalizado
                   </h3>
                   <p>
-                    Mi enfoque se basa en una conexión sencilla con cada
-                    paciente y una convicción profunda en el poder curativo que
-                    reside en cada uno.
+                  Mi enfoque se basa en una conexión sencilla con cada 
+                  persona y una convicción profunda en el poder curativo 
+                  que reside en cada uno.
                   </p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -141,26 +182,25 @@ const About = () => {
                     Desarrollo de Terapia
                   </h3>
                   <p>
-                    Desarrollamos las mejores estrategias para cada situación,
-                    explorando diferentes perspectivas para dar nuevos
-                    significados a las dificultades y lograr transformaciones.
+                  Con cada persona descubrimos las estrategias para 
+                  cada situación, para dar nuevos significados a las 
+                  dificultades y lograr transformaciones.
                   </p>
                 </div>
               </div>
             </section>
 
-            {/* Cómo Saber si Soy la Psicóloga Adecuada */}
             <section className="py-10 bg-gray-100 text-center">
               <h2 className="text-3xl font-bold mb-6">
                 Cómo Saber si Soy la Psicóloga Adecuada
               </h2>
               <p className="mb-4">
-                Puede reservar una sesión de consulta inicial para discutir sus
-                expectativas y determinar si soy la persona adecuada para
-                apoyarle en su proceso.
+              Puede reservar una sesión de consulta inicial para 
+              discutir sus necesidades y expectativas y así, determinar 
+              si soy la persona adecuada para apoyarle en su proceso.
               </p>
               <button className="bg-[#46617e] text-white py-2 px-4 rounded-lg hover:bg-[#3B8BAE] transition-colors">
-                Reservar Consulta
+                Agendar Cita
               </button>
             </section>
 
@@ -202,14 +242,15 @@ const About = () => {
               Primeros pasos para terapia
             </h2>
             <p>
-              Si cree que puedo ser la profesional que necesita, me encantaría
-              saber de usted. Juntos, evaluaremos si soy la persona adecuada
-              para ayudarle.
+            Si cree que puedo ser la profesional que necesita, 
+            me encantaría saber de usted. Juntos, evaluaremos 
+            si soy la persona adecuada para ayudarle.
             </p>
             <p>
-              Puede reservar una sesión de consulta inicial para discutir sus
-              expectativas y determinar si soy la persona adecuada para apoyarle
-              en su proceso.
+            Puede reservar una sesión de consulta inicial para 
+            discutir sus necesidades y expectativas y así, determinar 
+            si podemos trabajar juntos para avanzar en los objetivos 
+            propuestos.
             </p>
           </div>
         );
@@ -244,18 +285,18 @@ const About = () => {
           Bienvenidos
         </h1>
         <p className="text-lg font-medium text-gray-800 mb-2">
-          Hola, soy la{" "}
+          Soy la{" "}
           <span className="text-[#46617e] font-semibold">
             Dra. Esmeralda Conde
           </span>
-          , psicóloga y criminóloga.
+          , Psicóloga y Doctora en Criminología
         </p>
         <p className="text-base text-gray-800">
-          Mi enfoque se basa en una{" "}
-          <span className="text-[#3B8BAE] font-bold">conexión sencilla</span>{" "}
-          con cada paciente y una{" "}
-          <span className="text-[#3B8BAE] font-bold">convicción profunda</span>{" "}
-          en el poder curativo que reside en cada uno.
+          Ayudo a los{" "}
+          <span className="text-[#3B8BAE] font-bold"> adultos, adolescentes y niños</span>{" "}
+          con{" "}
+          <span className="text-[#3B8BAE] font-bold">TDAH</span>{" "}
+          en la mejora de sus síntomas y en su bienestar psicoemocional.
         </p>
         <div className="mt-6">
           <button
