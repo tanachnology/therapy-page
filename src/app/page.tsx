@@ -6,18 +6,17 @@ import { HeroSection } from "@/components/HeroSection";
 import InfoSection from "@/components/InfoSection";
 /* import MapSection from "@/components/MapSection"; */
 import { CardBlog } from "@/components/cardBlog/CardBlog";
-import StatisticsSection from "@/components/StatisticsSection";
 import { ContactForm } from "@/components/ContactForm";
 
 export default function Home() {
   return (
-    <main className="px-[70px]">
+    <main /* className="px-[70px]" */>
       <BannerCarrousel 
         images=
         {[
-          "/dificultades.jpg", 
-          "/terapia.jpg", 
-          "/bienestar.jpg", 
+          "/mujersentada.jpg", 
+          "/manos.jpg", 
+          "/unidad.jpg", 
         ]} 
         />
         <HeroSection  />

@@ -10,8 +10,8 @@ interface FooterSectionProps {
 
 const FooterSection: React.FC<FooterSectionProps> = ({ title, items }) => {
   return (
-    <div className="footer-section">
-      <h4 className="text-white text-xl font-bold">{title}</h4>
+    <div className="md:pr-0 pr-[90px] sm:px-0 ">
+      <h4 className="text-white text-xl font-bold mb-2">{title}</h4>
       <ul>
         {items.map((item, index) => (
           <li key={index} className="text-white text-xs font-normal uppercase">
@@ -27,13 +27,8 @@ const FooterSection: React.FC<FooterSectionProps> = ({ title, items }) => {
 
 export const Footer = () => {
   return (
-    <footer>
-      <div className="flex justify-around pt-[62px] pb-[40px] bg-[#1A5276]">
-        <ul className="">
-          {/* Necesito un w-full para la img aqui */}
-          <Logo />
-        </ul>
-
+    <footer className="bg-[#1A5276]">
+      <div className="grid grid-cols-1 md:grid-cols-3 justify-between max-w-[1165px] mx-auto gap-5 px-11 pt-[62px] pb-[40px]">
         <FooterSection
         title="Navegación"
         items={[
@@ -64,11 +59,14 @@ export const Footer = () => {
             { text: "DOMINGO: CERRADO" }
           ]}
         />
+        <FooterSection 
+          title=""
+          items={[
+            { text: "Políticas de Privacidad", url: "/privacy" },
+            { text: "Políticas de Cookies", url: "/cookies" }
+          ]}
+        />
       </div>
-      <ul className="text-white text-xs font-normal uppercase cursor-pointer flex justify-between pt-[20px] pb-[20px] list-none bg-[#1A5276]">
-        <li className="px-[90px]">Privacy Policies</li>
-        <li className="px-[90px]">User Agreements</li>
-      </ul>
       <ScrollButton />
     </footer>
   );

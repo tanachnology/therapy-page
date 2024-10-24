@@ -5,9 +5,9 @@ import Logo from '../shared/Header/Logo';
 
 export const CardBlog = () => {
   return (
-    <div className="grid grid-cols-3 gap-4 p-4">
+    <div className="lg:grid grid-cols-3 gap-4 p-4 md:inline-block">
       {cardBlogData.map((card, index) => (
-        <div key={index} className=" flex p-4 mt-16 mb-16 relative">
+        <div key={index} className=" flex p-4 mt-16 mb-16 relative sm:grid sm:grid-cols-[100px_1fr]">
           <div className='min-w-[50px] mr-2.5'>
             <Logo />
           </div>

@@ -247,10 +247,7 @@ const About = () => {
             si soy la persona adecuada para ayudarle.
             </p>
             <p>
-            Puede reservar una sesión de consulta inicial para 
-            discutir sus necesidades y expectativas y así, determinar 
-            si podemos trabajar juntos para avanzar en los objetivos 
-            propuestos.
+            Puede reservar una sesión de consulta inicial para discutir sus necesidades y expectativas.
             </p>
           </div>
         );
@@ -289,7 +286,7 @@ const About = () => {
           <span className="text-[#46617e] font-semibold">
             Dra. Esmeralda Conde
           </span>
-          , Psicóloga y Doctora en Criminología
+          , Psicóloga y Doctora en Criminología y Delincuencia Juvenil.
         </p>
         <p className="text-base text-gray-800">
           Ayudo a los{" "}
