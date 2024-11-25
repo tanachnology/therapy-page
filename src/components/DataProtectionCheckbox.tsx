@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { UseFormRegister, FieldError } from 'react-hook-form';
 
 interface DataProtectionCheckboxProps {
@@ -9,12 +9,6 @@ interface DataProtectionCheckboxProps {
 const DataProtectionCheckbox: React.FC<DataProtectionCheckboxProps> = ({ register, error }) => {
   const [isChecked, setIsChecked] = useState(false);
 
-  useEffect(() => {
-    const savedState = localStorage.getItem('dataProtectionChecked');
-    if (savedState) {
-      setIsChecked(JSON.parse(savedState));
-    }
-  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setIsChecked(e.target.checked);
