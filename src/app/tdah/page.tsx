@@ -15,7 +15,7 @@ export default function Tdah() {
           {/* Puntos Claves */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-bold text-blue-700 mb-2">Síntomas</h3>
+              <h3 className="text-xl font-bold text-blue-700 mb-2">Los síntomas más característicos se clasifican en:</h3>
               <ul className="list-disc list-inside text-gray-700">
                 <li>Falta de atención</li>
                 <li>Hiperactividad</li>
@@ -23,68 +23,93 @@ export default function Tdah() {
               </ul>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-bold text-blue-700 mb-2">Causas</h3>
-              <p className="text-gray-700">El TDAH puede ser causado por factores genéticos, ambientales y problemas en el desarrollo del sistema nervioso central.</p>
+              <h3 className="text-xl font-bold text-blue-700 mb-2">Las causas son múltiples:</h3>
+              <p className="text-gray-700">Factores genéticos, ambientales y neurológicos.</p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-bold text-blue-700 mb-2">Tratamientos</h3>
-              <p className="text-gray-700">Los tratamientos incluyen terapia conductual, medicamentos y apoyo educativo.</p>
+              <h3 className="text-xl font-bold text-blue-700 mb-2">Los tratamientos incluyen:</h3>
+              <p className="text-gray-700">Medicación, terapias psicológicas, apoyo educativo y social.</p>
             </div>
           </div>
 
           {/* Gráfica */}
-          <div className="mb-10">
-            <h3 className="text-2xl font-bold text-blue-700 mb-4">Prevalencia del TDAH</h3>
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <img src="https://via.placeholder.com/600x400?text=Gráfica+de+Prevalencia" alt="Gráfica de Prevalencia" className="w-full h-64 object-cover rounded" />
+          <div className="mb-10 flex flex-col items-center">
+            <div className="md:w-1/2 mb-5 md:mb-0">
+              <img src="/prevalencia.png" alt="Gráfica de Prevalencia" className="w-[200px] h-64  rounded shadow-lg mx-auto" />
+            </div>
+            <div className="md:w-1/2 md:pl-5">
+              <h2 className="text-2xl font-bold text-blue-700 m-2">Conferencia Mundial sobre TDAH de 2024</h2>
+              <p className="text-gray-700 m-4">
+                Este 3 y 4 de octubre, ADHD Australia y ADHD UK organizarán esta conferencia a la cual puede acceder: 
+                <a href="https://globalconference.com" className="text-blue-500 underline ml-1">Global Conference</a>.
+              </p>
             </div>
           </div>
 
-          {/* Barras de Progreso */}
-          <div className="mb-10">
-            <h3 className="text-2xl font-bold text-blue-700 mb-4">Progreso en el Tratamiento</h3>
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <div className="mb-4">
-                <h4 className="text-lg font-semibold text-gray-700">Mejora en la Atención</h4>
-                <div className="w-full bg-gray-200 rounded-full h-4">
-                  <div className="bg-blue-700 h-4 rounded-full" style={{ width: '75%' }}></div>
-                </div>
-              </div>
-              <div className="mb-4">
-                <h4 className="text-lg font-semibold text-gray-700">Reducción de la Hiperactividad</h4>
-                <div className="w-full bg-gray-200 rounded-full h-4">
-                  <div className="bg-blue-700 h-4 rounded-full" style={{ width: '60%' }}></div>
-                </div>
-              </div>
-              <div className="mb-4">
-                <h4 className="text-lg font-semibold text-gray-700">Control de la Impulsividad</h4>
-                <div className="w-full bg-gray-200 rounded-full h-4">
-                  <div className="bg-blue-700 h-4 rounded-full" style={{ width: '80%' }}></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Cards de Información */}
+          {/*Diagnosticos*/}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
-              <img src="https://via.placeholder.com/400x300?text=Diagnóstico" alt="Diagnóstico" className="w-full h-48 object-cover" />
+              <img src="/diagnostico.jpg" alt="Diagnóstico" className="w-full h-48 object-cover" />
               <div className="p-4">
-                <h3 className="text-xl font-bold text-blue-700 mb-2">Diagnóstico</h3>
-                <p className="text-gray-700 mb-4">El diagnóstico del TDAH se realiza a través de una evaluación clínica que incluye entrevistas y cuestionarios.</p>
+                <h3 className="text-xl font-bold text-blue-700 mb-2">La importancia de los medicamentos en combinación con otros tratamientos</h3>
+                <p className="text-gray-700 mb-4">Una investigación dirigida por la Universidad de Southampton ha descubierto que los medicamentos juegan un papel importante en la mejora de la calidad de vida de las personas con TDAH, pero los autores sugieren que se necesita más apoyo, además de los medicamentos. </p>
+                <a href="https://www.sciencedaily.com/releases/2024/08/240808115236.htm">
                 <button className="px-4 py-2 bg-blue-700 text-white font-semibold rounded hover:bg-blue-800 transition duration-300">
                   Leer más
                 </button>
+                </a>
               </div>
             </div>
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
               <img src="https://via.placeholder.com/400x300?text=Tratamiento" alt="Tratamiento" className="w-full h-48 object-cover" />
               <div className="p-4">
-                <h3 className="text-xl font-bold text-blue-700 mb-2">Tratamiento</h3>
-                <p className="text-gray-700 mb-4">El tratamiento del TDAH puede incluir medicamentos, terapia conductual y apoyo educativo.</p>
+                <h3 className="text-xl font-bold text-blue-700 mb-2">Los adultos con TDAH resaltan la importancia del apoyo en el trabajo</h3>
+                <p className="text-gray-700 mb-4">Se plantea que en España un 5,9% de menores y adolescentes y un 2,8% de adultos padecen este trastorno. Además que los especialistas resaltan que hay una gran parte de adultos sin diagnosticar y muchas veces se dan cuenta en la etapa laboral. En esta noticia por el día del TDAH se comparten varias experiencias de personas con TDAH, cómo es la calidad de vida laboral en relación con los síntomas del TDAH y algunas de sus necesidades. Seguir leyendo la noticia.</p>
+                <a href="https://www.rtve.es/noticias/20231027/tdha-adultos-trabajo-dificultades/2459382.shtml">
+                  <button className="px-4 py-2 bg-blue-700 text-white font-semibold rounded hover:bg-blue-800 transition duration-300">
+                    Leer más
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
+              <img src="https://via.placeholder.com/400x300?text=Apoyo+Familiar" alt="Apoyo Familiar" className="w-full h-48 object-cover" />
+              <div className="p-4">
+                <h3 className="text-xl font-bold text-blue-700 mb-2">Apoyo Familiar</h3>
+                <p className="text-gray-700 mb-4">El apoyo familiar es crucial para el manejo del TDAH, incluyendo la educación y la comunicación efectiva.</p>
                 <button className="px-4 py-2 bg-blue-700 text-white font-semibold rounded hover:bg-blue-800 transition duration-300">
                   Leer más
                 </button>
+              </div>
+            </div>
+          </div>
+
+
+          {/* Cards de Información */}
+          <h3 className="text-2xl font-bold text-blue-700 mb-4">Noticias</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
+              <img src="https://via.placeholder.com/400x300?text=Diagnóstico" alt="Diagnóstico" className="w-full h-48 object-cover" />
+              <div className="p-4">
+                <h3 className="text-xl font-bold text-blue-700 mb-2">La importancia de los medicamentos en combinación con otros tratamientos</h3>
+                <p className="text-gray-700 mb-4">Una investigación dirigida por la Universidad de Southampton ha descubierto que los medicamentos juegan un papel importante en la mejora de la calidad de vida de las personas con TDAH, pero los autores sugieren que se necesita más apoyo, además de los medicamentos. </p>
+                <a href="https://www.sciencedaily.com/releases/2024/08/240808115236.htm">
+                <button className="px-4 py-2 bg-blue-700 text-white font-semibold rounded hover:bg-blue-800 transition duration-300">
+                  Leer más
+                </button>
+                </a>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
+              <img src="https://via.placeholder.com/400x300?text=Tratamiento" alt="Tratamiento" className="w-full h-48 object-cover" />
+              <div className="p-4">
+                <h3 className="text-xl font-bold text-blue-700 mb-2">Los adultos con TDAH resaltan la importancia del apoyo en el trabajo</h3>
+                <p className="text-gray-700 mb-4">Se plantea que en España un 5,9% de menores y adolescentes y un 2,8% de adultos padecen este trastorno. Además que los especialistas resaltan que hay una gran parte de adultos sin diagnosticar y muchas veces se dan cuenta en la etapa laboral. En esta noticia por el día del TDAH se comparten varias experiencias de personas con TDAH, cómo es la calidad de vida laboral en relación con los síntomas del TDAH y algunas de sus necesidades. Seguir leyendo la noticia.</p>
+                <a href="https://www.rtve.es/noticias/20231027/tdha-adultos-trabajo-dificultades/2459382.shtml">
+                  <button className="px-4 py-2 bg-blue-700 text-white font-semibold rounded hover:bg-blue-800 transition duration-300">
+                    Leer más
+                  </button>
+                </a>
               </div>
             </div>
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">

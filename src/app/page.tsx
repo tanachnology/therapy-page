@@ -3,14 +3,12 @@
 import { BannerCarrousel } from "@/components/BannerCarrousel";
 import {ContentGrid} from "@/components/ContentGrid";
 import { HeroSection } from "@/components/HeroSection";
-import InfoSection from "@/components/InfoSection";
-/* import MapSection from "@/components/MapSection"; */
 import { CardBlog } from "@/components/cardBlog/CardBlog";
 import { ContactForm } from "@/components/ContactForm";
 
 export default function Home() {
   return (
-    <main /* className="px-[70px]" */>
+    <main>
       <BannerCarrousel 
         images=
         {[
@@ -23,10 +21,6 @@ export default function Home() {
         <ContentGrid />
         <CardBlog />
         <ContactForm />
-        
-        {/* <StatisticsSection /> */}
-        {/* <MapSection /> */}
-        {/* <InfoSection /> */}
     </main>
   );
 }

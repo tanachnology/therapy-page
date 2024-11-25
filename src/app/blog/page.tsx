@@ -32,9 +32,9 @@ export default function Blog() {
   return (
     <>
       <StaticBanner
-        backgroundImage="/blog.jpg"
-        subtitle="Blogs"
-        title="Conoce nuestros artículos"
+        backgroundImage="/investigacion.jpg"
+        subtitle="Blog"
+        title="Conoce investigaciones sobre TDAH"
       />
       <div className="p-5 bg-gradient-to-r from-blue-50 to-blue-100">
         <div className="max-w-7xl mx-auto">
