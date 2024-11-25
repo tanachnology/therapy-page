@@ -86,7 +86,7 @@ const FAQAccordion = () => {
         <li>Se levanta en situaciones en que se espera que permanezca sentado.</li>
         <li>Corretea o trepa en situaciones en las que no resulta apropiado.</li>
         <li>Es incapaz de jugar o de ocuparse tranquilamente en actividades recreativas.</li>
-        <li>Está ocupado, actuando como si "lo impulsara un motor".</li>
+        <li>Está ocupado, actuando como si lo impulsara un motor.</li>
         <li>Habla excesivamente.</li>
         <li>Responde inesperadamente o antes de que se haya concluido una pregunta.</li>
         <li>Le es difícil esperar su turno.</li>
