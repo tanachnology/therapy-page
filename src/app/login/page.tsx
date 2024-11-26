@@ -2,13 +2,15 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation'; // Usa 'next/navigation' en lugar de 'next/router'
-import { login } from '@/services/api';
+import { useAuthStore } from '@/store/AuthStore';
+
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const router = useRouter();
+  const loginUser = useAuthStore((state) => state.loginUser);
 
   useEffect(() => {
     // Este código se ejecutará solo en el cliente
@@ -17,10 +19,8 @@ const Login = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const data = await login(username, password);
-      // Manejar la respuesta del login, por ejemplo, guardar el token en localStorage
-      localStorage.setItem('token', data.token);
-      router.push('/admin'); // Redirigir a la página de admin
+      await loginUser(username, password);
+      router.push('/'); 
     } catch (err: any) {
       setError(err.message);
     }
