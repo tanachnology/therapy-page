@@ -2,7 +2,7 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from "react";
 import { StaticBanner } from "@/components/StaticBanner";
-/* import { getBlogs } from "@/services/blogService"; */
+import htmlParser from "html-react-parser";
 import { useAuthStore } from "@/store/AuthStore";
 import Modal from "@/components/modal";
 import { useBlogStore } from "@/store/BlogStore";
@@ -83,8 +83,8 @@ export default function Blog() {
                 
                 <img src={article.image_url} alt={article.title} className="w-full h-48 object-cover" />
                 <div className="p-4">
-                  <h3 className="text-xl font-bold text-blue-700 mb-2">{article.title}</h3>
-                  <p className="text-gray-700 mb-4 line-clamp-4">{article.content}</p>
+                  <h3 className="text-xl font-bold text-blue-700 mb-2">{htmlParser(article.title)}</h3>
+                  <p className="text-gray-700 mb-4 line-clamp-4">{htmlParser(article.content)}</p>
                   <Link href={`/blog/${article.id}`}>
                   <button className="px-4 py-2 bg-blue-700 text-white font-semibold rounded hover:bg-blue-800 transition duration-300"
                   >

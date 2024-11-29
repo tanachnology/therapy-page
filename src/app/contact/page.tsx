@@ -40,7 +40,7 @@ const Contact = () => {
   return (
     <>
       <StaticBanner 
-        backgroundImage="../../../public/banner.png"
+        backgroundImage="/contactanos.jpg"
         subtitle="Contacto"
         title="Conócenos"
       />

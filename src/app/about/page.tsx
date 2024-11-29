@@ -13,6 +13,8 @@ import { RiUserHeartFill } from "react-icons/ri";
 import { SiCrowdsource } from "react-icons/si";
 import { MdLocalLibrary } from "react-icons/md";
 import { IoIosHappy } from "react-icons/io";
+import Link from "next/link";
+import ExperienceTable from "@/components/experienceTable";
 
 interface SpecializationCardProps {
   icon: React.ReactNode;
@@ -119,48 +121,27 @@ const About = () => {
               </div>
             </section>
 
-            <section className="py-10 bg-gray-100">
-              <h2 className="text-3xl font-bold text-center mb-6">
-                Experiencia en Terapia Psicológica
-              </h2>
-              <div className="flex flex-col items-center">
-                <TimelineItem
-                  year="20"
-                  description="Años Experiencia como psicóloga en distintos ámbitos"
-                />
-                <TimelineItem
-                  year="2"
-                  description="Años Psicóloga clínica en entorno hospitalarios"
-                />
-                <TimelineItem
-                  year="2"
-                  description="Años Intervención psicopedagógica para niños con traumas por violencia y en riesgo social"
-                />
-                <TimelineItem
-                  year="10"
-                  description="Años Entrenamiento a padres y madres con hijos(as) con TDAH y problemas de conducta"
-                />
-                <TimelineItem
-                  year="9"
-                  description="Años Intervención psicopedagógica para niños y adolescentes con TDAH"
-                />
-
-                <TimelineItem
-                  year="9"
-                  description="Años Intervención psicopedagógica para niños y adolescentes con TDAH"
-                />
-                <TimelineItem
-                  year="8"
-                  description="Años Terapia psicológica para adultos con TDAH, Ansiedad y Depresión"
-                />
-                <TimelineItem
-                  year="15"
-                  description="Años Entrenamiento a profesores para la enseñanza del lenguaje escrito; implementación de estrategias en el aula para alumnado con TDAH, dificultades de aprendizaje y problemas de conducta"
-                />
-              </div>
-
-              <p>Mi amplia trayectoria me permite ofrecer una intervención integral y efectiva adaptada a las necesidades de cada individuo.</p>
-            </section>
+            <div>
+      <section className="py-10 flex flex-col items-center">
+        <h2 className="text-3xl font-bold text-center mb-6">
+          Experiencia en Terapia Psicológica
+        </h2>
+        <div className="bg-white flex flex-col md:flex-row w-full  items-center justify-center mb-6 p-8 ">
+            <ExperienceTable />   
+          <div className="w-[40%] md:w-2/2 p-4 hidden lg:flex justify-center">
+            <img
+              src="/whiteProfile.jpeg"
+              alt="Profile"
+              className="rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105"
+            />
+          </div>
+        </div>
+        <p className="text-center max-w-2xl">
+          Mi amplia trayectoria me permite ofrecer una intervención integral y efectiva adaptada a las necesidades de cada individuo.
+        </p>
+      </section>
+    </div>
+            
 
             <section className="py-10">
               <h2 className="text-3xl font-bold text-center mb-6">
@@ -199,9 +180,11 @@ const About = () => {
               discutir sus necesidades y expectativas y así, determinar 
               si soy la persona adecuada para apoyarle en su proceso.
               </p>
+              <Link href="/contact">
               <button className="bg-[#46617e] text-white py-2 px-4 rounded-lg hover:bg-[#3B8BAE] transition-colors">
                 Agendar Cita
               </button>
+              </Link>
             </section>
 
             {/* Footer */}

@@ -1,4 +1,5 @@
 import { StaticBanner } from "@/components/StaticBanner";
+import Link from "next/link";
 
 export default function Tdah() {
   return (
@@ -47,7 +48,7 @@ export default function Tdah() {
           </div>
 
           {/*Diagnosticos*/}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+{/*           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
               <img src="/diagnostico.jpg" alt="Diagnóstico" className="w-full h-48 object-cover" />
               <div className="p-4">
@@ -82,44 +83,32 @@ export default function Tdah() {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
 
 
           {/* Cards de Información */}
           <h3 className="text-2xl font-bold text-blue-700 mb-4">Noticias</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
-              <img src="https://via.placeholder.com/400x300?text=Diagnóstico" alt="Diagnóstico" className="w-full h-48 object-cover" />
               <div className="p-4">
                 <h3 className="text-xl font-bold text-blue-700 mb-2">La importancia de los medicamentos en combinación con otros tratamientos</h3>
-                <p className="text-gray-700 mb-4">Una investigación dirigida por la Universidad de Southampton ha descubierto que los medicamentos juegan un papel importante en la mejora de la calidad de vida de las personas con TDAH, pero los autores sugieren que se necesita más apoyo, además de los medicamentos. </p>
-                <a href="https://www.sciencedaily.com/releases/2024/08/240808115236.htm">
+                <p className="text-gray-700 mb-4 line-clamp-6">Una investigación dirigida por la Universidad de Southampton ha descubierto que los medicamentos juegan un papel importante en la mejora de la calidad de vida de las personas con TDAH, pero los autores sugieren que se necesita más apoyo, además de los medicamentos. </p>
+                <Link href="https://www.sciencedaily.com/releases/2024/08/240808115236.htm">
                 <button className="px-4 py-2 bg-blue-700 text-white font-semibold rounded hover:bg-blue-800 transition duration-300">
                   Leer más
                 </button>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
-              <img src="https://via.placeholder.com/400x300?text=Tratamiento" alt="Tratamiento" className="w-full h-48 object-cover" />
               <div className="p-4">
                 <h3 className="text-xl font-bold text-blue-700 mb-2">Los adultos con TDAH resaltan la importancia del apoyo en el trabajo</h3>
-                <p className="text-gray-700 mb-4">Se plantea que en España un 5,9% de menores y adolescentes y un 2,8% de adultos padecen este trastorno. Además que los especialistas resaltan que hay una gran parte de adultos sin diagnosticar y muchas veces se dan cuenta en la etapa laboral. En esta noticia por el día del TDAH se comparten varias experiencias de personas con TDAH, cómo es la calidad de vida laboral en relación con los síntomas del TDAH y algunas de sus necesidades. Seguir leyendo la noticia.</p>
-                <a href="https://www.rtve.es/noticias/20231027/tdha-adultos-trabajo-dificultades/2459382.shtml">
+                <p className="text-gray-700 mb-4 line-clamp-6">Se plantea que en España un 5,9% de menores y adolescentes y un 2,8% de adultos padecen este trastorno. Además que los especialistas resaltan que hay una gran parte de adultos sin diagnosticar y muchas veces se dan cuenta en la etapa laboral. En esta noticia por el día del TDAH se comparten varias experiencias de personas con TDAH, cómo es la calidad de vida laboral en relación con los síntomas del TDAH y algunas de sus necesidades. Seguir leyendo la noticia.</p>
+                <Link href="https://www.rtve.es/noticias/20231027/tdha-adultos-trabajo-dificultades/2459382.shtml">
                   <button className="px-4 py-2 bg-blue-700 text-white font-semibold rounded hover:bg-blue-800 transition duration-300">
                     Leer más
                   </button>
-                </a>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
-              <img src="https://via.placeholder.com/400x300?text=Apoyo+Familiar" alt="Apoyo Familiar" className="w-full h-48 object-cover" />
-              <div className="p-4">
-                <h3 className="text-xl font-bold text-blue-700 mb-2">Apoyo Familiar</h3>
-                <p className="text-gray-700 mb-4">El apoyo familiar es crucial para el manejo del TDAH, incluyendo la educación y la comunicación efectiva.</p>
-                <button className="px-4 py-2 bg-blue-700 text-white font-semibold rounded hover:bg-blue-800 transition duration-300">
-                  Leer más
-                </button>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import Logo from "../Header/Logo";
+import Link from "next/link";
 import ScrollButton from "./ScrollButton";
 
 interface FooterSectionProps {
@@ -15,9 +15,9 @@ const FooterSection: React.FC<FooterSectionProps> = ({ title, items }) => {
       <ul>
         {items.map((item, index) => (
           <li key={index} className="text-white text-xs font-normal uppercase">
-            <a href={item.url} target="_blank" rel="noopener noreferrer">
+            <Link href={item.url || '#'}>
               {item.text}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
@@ -62,12 +62,14 @@ export const Footer = () => {
         <FooterSection 
           title=""
           items={[
-            { text: "Políticas de Privacidad", url: "/privacy" },
-            { text: "Políticas de Cookies", url: "/cookies" }
+            { text: "Políticas de Privacidad", url: "/privacy" }
           ]}
         />
       </div>
       <ScrollButton />
+{/*       <p className="text-center text-gray-500 text-sm mt-4">
+        © 2024 Esmeralda Conde Psicóloga. Todos los derechos reservados. Diseño web por <a href="https://nahyoomi.com" className="text-blue-500 hover:underline">nahyoomi</a>.
+      </p> */}
     </footer>
   );
 };

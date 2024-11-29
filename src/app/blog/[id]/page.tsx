@@ -3,6 +3,7 @@
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { useBlogStore } from '@/store/BlogStore';
+import htmlParser from 'html-react-parser';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
@@ -48,9 +49,9 @@ const BlogPost = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-5">
-      <h1 className="text-3xl font-bold text-blue-700 mb-4">{article.title}</h1>
+      <h1 className="text-3xl font-bold text-blue-700 mb-4">{htmlParser(article.title)}</h1>
       <img src={article.image_url} alt={article.title} className="w-full h-64 object-cover mb-4" />
-      <p className="text-gray-700">{article.content}</p>
+      <p className="text-gray-700">{htmlParser(article.content)}</p>
     </div>
   );
 };

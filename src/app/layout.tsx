@@ -19,13 +19,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
- /*  const router = useRouter();
-  const isHomePage = router.pathname === '/'; */
 
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* {!isHomePage && <ContactHeader />} */}
         <Header />
         {children}
         <Footer />
