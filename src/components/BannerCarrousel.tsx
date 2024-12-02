@@ -1,16 +1,33 @@
-import React, { useState, useEffect } from "react";
-import { PiArrowRightThin, PiArrowLeftThin  } from "react-icons/pi";
+import { useState, useEffect } from "react";
+import { PiArrowRightThin, PiArrowLeftThin } from "react-icons/pi";
+import EditMenu from "./EditMenu";
+import { useAuthStore } from "@/store/AuthStore";
+import { addCarrouselImages, deleteCarrouselImages } from "@/services/homeServices";
+import ModalEdition from "./ModalEdition";
+import LoadingSpinner from "./LoadinSpinner";
+import { IImage } from "@/app/page";
 
 interface BannerCarrouselProps {
-  images: string[];
+  images: IImage[],
+  setImages: (images: IImage[]) => void,
+  BannerHomeLoading?: boolean,
   interval?: number;
 }
 
 export const BannerCarrousel: React.FC<BannerCarrouselProps> = ({
   images,
+  setImages,
+  BannerHomeLoading,
   interval = 5000,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Fetch images from the API
+  useEffect(() => {
+     console.log('Images:', images);
+  }, [images]);
 
   // Cambia la imagen automáticamente cada cierto tiempo
   useEffect(() => {
@@ -33,10 +50,35 @@ export const BannerCarrousel: React.FC<BannerCarrouselProps> = ({
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-  // Cambia a una imagen específica
   const goToImage = (index: number) => {
     setCurrentIndex(index);
   };
+
+  const handleCreate = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleSave = (image_url: string, description: string) => {
+    const newImage: IImage = { id: Date.now().toString(), image_url, description };
+    addCarrouselImages(image_url, description);
+    setImages([...images, newImage]);
+    setIsModalOpen(false);
+  };
+
+  const handleDelete = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleDeleteImage = (id: string) => {
+    console.log('Deleting image:', id);
+    deleteCarrouselImages(id);
+    setImages(images.filter((image) => image.id !== id));
+    setIsModalOpen(false);
+  };
+
+  if (BannerHomeLoading) {
+    return <LoadingSpinner />;
+  }
 
   return (
     <div className="relative w-full mx-auto overflow-hidden">
@@ -55,11 +97,11 @@ export const BannerCarrousel: React.FC<BannerCarrouselProps> = ({
       >
         {images.map((image, index) => (
           <div
-            key={index}
-            className="min-w-full  max-h-[500px] flex items-center justify-center bg-gray-200"
+            key={image.id}
+            className="min-w-full max-h-[500px] flex items-center justify-center bg-gray-200"
           >
             <img
-              src={image}
+              src={image.image_url}
               alt={`Slide ${index}`}
               className="w-full h-auto object-cover max-w-full max-h-full"
             />
@@ -86,7 +128,19 @@ export const BannerCarrousel: React.FC<BannerCarrouselProps> = ({
             onClick={() => goToImage(index)}
           />
         ))}
+        {isAuthenticated && (
+        <div className="absolute bottom-0 left-[850px]">
+          <EditMenu buttons={['create']} onCreate={handleCreate}  onDelete={handleDelete} />
+        </div>
+        )}
       </div>
+      <ModalEdition
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onSave={handleSave}
+        onDelete={handleDeleteImage}
+        images={images}
+      />
     </div>
   );
 };
