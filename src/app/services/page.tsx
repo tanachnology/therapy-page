@@ -1,10 +1,16 @@
 'use client';
-
+import { useState } from "react";
 import { BannerCarrousel } from "@/components/BannerCarrousel";
 import TextSection from "@/components/TextSection";
 import ImageSection from "@/components/ImageSection";
 
 export default function Services() {
+  const [images, setImages] = useState([
+    {image_url:"/posti.jpg", description: "Descripción de la imagen 1", id: "1"},
+    {image_url:"/diversion.jpg", description: "Descripción de la imagen 2", id: "2"},
+    {image_url:"/susurrar.jpg", description: "Descripción de la imagen 3", id: "3"} 
+  ]);
+  const [BannerHomeLoading, setBannerHomeLoading] = useState(false);
   const sections = [
     {
       title: "Intervención TDAH adultos",
@@ -88,11 +94,9 @@ export default function Services() {
   return (
     <>
       <BannerCarrousel 
-        images={[
-          "/posti.jpg", 
-          "/diversion.jpg", 
-          "/susurrar.jpg", 
-        ]}
+        images={images}
+        setImages={setImages}
+        BannerHomeLoading={BannerHomeLoading}
       />
       <div className="p-5 bg-gray-100">
         {sections.map((section, index) => (
