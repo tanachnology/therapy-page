@@ -94,8 +94,6 @@ export default function Services() {
   return (
     <>
       <BannerCarrousel 
-        images={images}
-        setImages={setImages}
         BannerHomeLoading={BannerHomeLoading}
       />
       <div className="p-5 bg-gray-100">

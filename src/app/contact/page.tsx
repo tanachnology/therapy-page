@@ -135,7 +135,7 @@ const Contact = () => {
               </div>
               <div className="flex items-center">
                 <svg className="w-6 h-6 text-blue-700 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 8a6 6 0 00-12 0v4a6 6 0 0012 0V8z"></path></svg>
-                <p className="text-gray-700">Dirección: Calle Falsa 123, Ciudad, País</p>
+                <p className="text-gray-700">Dirección: Albacete y Motilleja, España</p>
               </div>
             </div>
           </div>

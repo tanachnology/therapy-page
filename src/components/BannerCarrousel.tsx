@@ -1,33 +1,37 @@
 import { useState, useEffect } from "react";
 import { PiArrowRightThin, PiArrowLeftThin } from "react-icons/pi";
-import EditMenu from "./EditMenu";
-import { useAuthStore } from "@/store/AuthStore";
-import { addCarrouselImages, deleteCarrouselImages } from "@/services/homeServices";
-import ModalEdition from "./ModalEdition";
 import LoadingSpinner from "./LoadinSpinner";
-import { IImage } from "@/app/page";
+
+// Definimos imágenes fijas
+const fixedImages = [
+  {
+    id: "1",
+    image_url: "/mujersentada.jpg",
+    description: "Mujer sentada en sesión de terapia"
+  },
+  {
+    id: "2",
+    image_url: "/manos.jpg",
+    description: "Manos entrelazadas representando conexión"
+  },
+  {
+    id: "3",
+    image_url: "/unidad.jpg",
+    description: "Grupo representando unidad y apoyo mutuo"
+  }
+];
 
 interface BannerCarrouselProps {
-  images: IImage[],
-  setImages: (images: IImage[]) => void,
-  BannerHomeLoading?: boolean,
+  BannerHomeLoading?: boolean;
   interval?: number;
 }
 
 export const BannerCarrousel: React.FC<BannerCarrouselProps> = ({
-  images,
-  setImages,
   BannerHomeLoading,
   interval = 5000,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  // Fetch images from the API
-  useEffect(() => {
-     console.log('Images:', images);
-  }, [images]);
+  const images = fixedImages;
 
   // Cambia la imagen automáticamente cada cierto tiempo
   useEffect(() => {
@@ -54,38 +58,17 @@ export const BannerCarrousel: React.FC<BannerCarrouselProps> = ({
     setCurrentIndex(index);
   };
 
-  const handleCreate = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleSave = (image_url: string, description: string) => {
-    const newImage: IImage = { id: Date.now().toString(), image_url, description };
-    addCarrouselImages(image_url, description);
-    setImages([...images, newImage]);
-    setIsModalOpen(false);
-  };
-
-  const handleDelete = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleDeleteImage = (id: string) => {
-    console.log('Deleting image:', id);
-    deleteCarrouselImages(id);
-    setImages(images.filter((image) => image.id !== id));
-    setIsModalOpen(false);
-  };
-
   if (BannerHomeLoading) {
     return <LoadingSpinner />;
   }
 
   return (
     <div className="relative w-full mx-auto overflow-hidden">
-      {/* Botón para ir a la imagen anterior */}
+      {/* Botones de navegación - Visibles en desktop, ocultos en mobile */}
       <button
-        className="z-10 absolute top-1/2 left-4 transform -translate-y-1/2 text-[#2C3E50] text-[50px]"
+        className="z-10 absolute top-1/2 left-2 md:left-4 transform -translate-y-1/2 text-[30px] md:text-[50px] text-[#2C3E50] bg-white/30 rounded-full p-1 md:p-2 hidden sm:block"
         onClick={goToPrevious}
+        aria-label="Imagen anterior"
       >
         <PiArrowLeftThin />
       </button>
@@ -98,49 +81,50 @@ export const BannerCarrousel: React.FC<BannerCarrouselProps> = ({
         {images.map((image, index) => (
           <div
             key={image.id}
-            className="min-w-full max-h-[500px] flex items-center justify-center bg-gray-200"
+            className="min-w-full flex items-center justify-center bg-gray-200"
           >
             <img
               src={image.image_url}
-              alt={`Slide ${index}`}
-              className="w-full h-auto object-cover max-w-full max-h-full"
+              alt={image.description}
+              className="w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] object-cover"
             />
           </div>
         ))}
       </div>
 
-      {/* Botón para ir a la siguiente imagen */}
       <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 text-[50px] text-[#2C3E50]"
+        className="absolute top-1/2 right-2 md:right-4 transform -translate-y-1/2 text-[30px] md:text-[50px] text-[#2C3E50] bg-white/30 rounded-full p-1 md:p-2 hidden sm:block"
         onClick={goToNext}
+        aria-label="Siguiente imagen"
       >
         <PiArrowRightThin />
       </button>
 
-      {/* Puntitos para cambiar de imagen */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      {/* Indicadores de imagen actual */}
+      <div className="absolute bottom-2 md:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {images.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full ${
+            className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${
               index === currentIndex ? "bg-[#E67E22]" : "bg-gray-400"
             }`}
             onClick={() => goToImage(index)}
+            aria-label={`Ir a imagen ${index + 1}`}
           />
         ))}
-        {isAuthenticated && (
-        <div className="absolute bottom-0 left-[850px]">
-          <EditMenu buttons={['create']} onCreate={handleCreate}  onDelete={handleDelete} />
-        </div>
-        )}
       </div>
-      <ModalEdition
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        onSave={handleSave}
-        onDelete={handleDeleteImage}
-        images={images}
-      />
+
+      {/* Área táctil para swipe en dispositivos móviles */}
+      <div className="block sm:hidden">
+        <div 
+          className="absolute left-0 top-0 h-full w-1/2" 
+          onClick={goToPrevious}
+        ></div>
+        <div 
+          className="absolute right-0 top-0 h-full w-1/2" 
+          onClick={goToNext}
+        ></div>
+      </div>
     </div>
   );
 };
