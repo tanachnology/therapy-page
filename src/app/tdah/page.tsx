@@ -132,11 +132,20 @@ export default function Tdah() {
             </div>
           </div>
 
-          {/* Imagen y Texto */}
+          {/* Historias de Éxito con Video de YouTube */}
           <div className="mb-10">
             <h3 className="text-2xl font-bold text-blue-700 mb-4">Historias de Éxito</h3>
             <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center">
-              <img src="https://via.placeholder.com/400x300?text=Historia+de+Éxito" alt="Historia de Éxito" className="w-full md:w-1/2 h-48 object-cover rounded mb-4 md:mb-0 md:mr-4" />
+              <div className="w-full md:w-1/2 h-48 sm:h-64 md:h-72 mb-4 md:mb-0 md:mr-4 overflow-hidden rounded">
+                <iframe 
+                  className="w-full h-full" 
+                  src="https://www.youtube.com/embed/d_1JduRnX4w" 
+                  title="Historias de éxito con TDAH" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowFullScreen
+                ></iframe>
+              </div>
               <p className="text-gray-700">Conoce las historias de éxito de niños y adolescentes que han aprendido a manejar el TDAH y han alcanzado sus metas.</p>
             </div>
           </div>

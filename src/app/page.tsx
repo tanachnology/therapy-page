@@ -33,7 +33,7 @@ export default function Home() {
 
   return (
     <main>
-      <BannerCarrousel BannerHomeLoading={BannerHomeLoading}  images={images} setImages={setImages} />
+      <BannerCarrousel />
       <HeroSection  />
       <ContentGrid />
       <CardBlog />
